@@ -17,9 +17,9 @@ Everything is plain HTML, CSS, and ES6+ JavaScript. No React, no Vite, no PostCS
 - Named CSS Grid areas in the destinations section that **recompose** at three breakpoints rather than just collapsing to a single column:
 
   ```
-  Desktop   "amalfi amalfi kyoto"       Tablet    "amalfi kyoto"
-            "patagonia marrakech santorini"         "patagonia marrakech"
-            "maldives maldives maldives"            "santorini maldives"
+  Desktop (6-col)   "amalfi" — full width          Tablet (2-col)  "amalfi kyoto"
+                    "kyoto patagonia marrakech"     (equal halves)  "patagonia marrakech"
+                    "santorini maldives"                            "santorini maldives"
   ```
 
 - Properties in strict alphabetical order, enforced by Stylelint

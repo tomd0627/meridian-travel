@@ -3,6 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
   var revealObserver;
   var journeyEntries = document.querySelectorAll('.journey__entry');
   var dayLinks = document.querySelectorAll('.journey__day-link');
+  var daySelect = document.getElementById('journey-day-select');
   var intersecting = new Set();
   var sidebarObserver;
   var header = document.querySelector('.site-header');
@@ -29,10 +30,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // ── Journey sticky sidebar ───────────────────────────────────────────────────
   function updateActiveLink() {
-    if (!intersecting.size) return;
-
     var minDay = Infinity;
     var activeEl = null;
+    var targetHref;
+    var sidebar;
+
+    if (!intersecting.size) return;
 
     intersecting.forEach((el) => {
       var day = parseInt(el.dataset.day, 10);
@@ -43,13 +46,20 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     if (!activeEl) return;
-    var targetHref = `#day-${activeEl.dataset.day}`;
+    targetHref = `#day-${activeEl.dataset.day}`;
 
     dayLinks.forEach((link) => {
       var isActive = link.getAttribute('href') === targetHref;
       link.classList.toggle('is-active', isActive);
-      if (isActive) link.scrollIntoView({ block: 'nearest' });
+      if (isActive) {
+        sidebar = link.closest('.journey__sidebar');
+        if (sidebar && sidebar.scrollHeight > sidebar.clientHeight) {
+          link.scrollIntoView({ block: 'nearest' });
+        }
+      }
     });
+
+    if (daySelect) daySelect.value = activeEl.id;
   }
 
   if (journeyEntries.length && dayLinks.length) {
@@ -69,6 +79,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
     journeyEntries.forEach((el) => {
       sidebarObserver.observe(el);
+    });
+  }
+
+  if (daySelect) {
+    daySelect.addEventListener('change', () => {
+      var target = document.getElementById(daySelect.value);
+      if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
     });
   }
 

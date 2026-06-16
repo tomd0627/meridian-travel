@@ -22,9 +22,11 @@
 [data-reveal].is-revealed > *:nth-child(2) {
   transition-delay: 80ms;
 }
+
 [data-reveal].is-revealed > *:nth-child(3) {
   transition-delay: 160ms;
 }
+
 [data-reveal].is-revealed > *:nth-child(4) {
   transition-delay: 240ms;
 }
@@ -33,6 +35,7 @@
 .step[data-reveal]:nth-child(2) {
   transition-delay: 80ms;
 }
+
 .step[data-reveal]:nth-child(3) {
   transition-delay: 160ms;
 }
@@ -43,10 +46,12 @@
     transform: scaleY(1);
     transform-origin: top center;
   }
+
   50% {
     transform: scaleY(0.35);
     transform-origin: top center;
   }
+
   100% {
     transform: scaleY(1);
     transform-origin: top center;

@@ -76,12 +76,26 @@
   grid-template-columns: 1fr;
 }
 
-/* Journey: sidebar above content on mobile */
+/* Journey: hide sidebar, show select on mobile */
+.journey__entry {
+  scroll-margin-block-start: calc(var(--header-height) + 7.5rem);
+}
+
 .journey__layout {
   grid-template-columns: 1fr;
 }
 
+.journey__mobile-nav {
+  background-color: var(--color-bg);
+  display: block;
+  inset-block-start: var(--header-height);
+  padding-block: var(--space-3);
+  position: sticky;
+  z-index: var(--z-sticky);
+}
+
 .journey__sidebar {
+  display: none;
   max-block-size: none;
   overflow-y: visible;
   padding-block-start: var(--space-4);
@@ -109,6 +123,10 @@
 }
 
 /* Inquiry: single column on mobile */
+.form-field-row {
+  grid-template-columns: 1fr;
+}
+
 .inquire__inner {
   grid-template-columns: 1fr;
 }
@@ -128,12 +146,21 @@ section {
   padding-block: var(--space-16);
 }
 
-.hero__heading {
-  font-size: clamp(var(--text-4xl), 10vw, var(--text-5xl));
+.hero {
+  block-size: 75svh;
+  min-block-size: 480px;
 }
 
 .hero__content {
   inset-block-end: var(--space-16);
+}
+
+.hero__heading {
+  font-size: clamp(var(--text-4xl), 10vw, var(--text-5xl));
+}
+
+.hero__scroll-indicator {
+  display: none;
 }
 
 /* ══════════════════════════════════════════════
@@ -178,7 +205,23 @@ section {
   }
 
   .site-nav__link {
+    align-items: center;
+    display: inline-flex;
     padding-block: 0;
+  }
+
+  .site-nav__link.btn--outline {
+    margin-block-start: 0;
+  }
+
+  /* Hero: restore full-viewport height and scroll indicator at tablet and above */
+  .hero {
+    block-size: 100svh;
+    min-block-size: 640px;
+  }
+
+  .hero__scroll-indicator {
+    display: flex;
   }
 
   /* Destinations: 2-column recomposition */
@@ -206,12 +249,21 @@ section {
     grid-template-columns: repeat(3, 1fr);
   }
 
-  /* Journey: restore sidebar */
+  /* Journey: restore sidebar, reset scroll margin to header-only offset */
+  .journey__entry {
+    scroll-margin-block-start: calc(var(--header-height) + var(--space-6));
+  }
+
   .journey__layout {
     grid-template-columns: 14rem 1fr;
   }
 
+  .journey__mobile-nav {
+    display: none;
+  }
+
   .journey__sidebar {
+    display: block;
     inset-block-start: calc(var(--header-height) + var(--space-8));
     max-block-size: calc(100vh - var(--header-height) - var(--space-16));
     overflow-y: auto;
@@ -253,18 +305,27 @@ section {
    ══════════════════════════════════════════════ */
 
 @media (width >= 1024px) {
-  /* Destinations: 3-column recomposition with featured spans */
+  /* Destinations: 6-column recomposition.
+     Row 1: Amalfi — full-width feature
+     Row 2: Kyoto, Patagonia, Marrakech — equal thirds (3-up)
+     Row 3: Santorini, Maldives — equal halves (2-up) */
   .destinations-grid {
     grid-template-areas:
-      'amalfi amalfi kyoto'
-      'patagonia marrakech santorini'
-      'maldives maldives maldives';
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 26rem 20rem 16rem;
+      'amalfi amalfi amalfi amalfi amalfi amalfi'
+      'kyoto kyoto patagonia patagonia marrakech marrakech'
+      'santorini santorini santorini maldives maldives maldives';
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: 28rem 20rem 20rem;
   }
 
   .hero__heading {
     font-size: clamp(var(--text-5xl), 7vw, var(--text-7xl));
+  }
+
+  .journey__entry-body picture,
+  .journey__entry-body img {
+    block-size: auto;
+    max-block-size: 28rem;
   }
 
   .site-footer__inner {

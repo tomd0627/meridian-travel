@@ -93,14 +93,20 @@
 }
 
 /* JS adds .is-scrolled when page is not at top */
-.site-header.is-scrolled {
+.site-header.is-scrolled,
+.site-header:has(.site-nav.is-open) {
   background-color: var(--color-bg);
   box-shadow: var(--shadow-sm);
+}
+
+.site-header:has(.site-nav.is-open) .site-logo {
+  color: var(--color-text);
 }
 
 .site-header__inner {
   align-items: center;
   display: flex;
+  inline-size: 100%;
   justify-content: space-between;
 }
 
@@ -153,6 +159,16 @@
   color: #fff;
 }
 
+/* Mobile nav open on transparent header: links sit on cream bg, need dark text */
+.site-header:not(.is-scrolled) .site-nav.is-open .site-nav__link {
+  color: var(--color-text-muted);
+}
+
+.site-header:not(.is-scrolled) .site-nav.is-open .site-nav__link.btn--outline {
+  border-color: var(--color-forest);
+  color: var(--color-forest);
+}
+
 /* Override for the CTA btn in nav — keep its own colours */
 .site-nav__link.btn--outline {
   border-color: rgb(250 247 242 / 0.6);
@@ -186,7 +202,8 @@
   color: var(--color-accent);
 }
 
-.site-header.is-scrolled .nav-toggle {
+.site-header.is-scrolled .nav-toggle,
+.site-header:has(.site-nav.is-open) .nav-toggle {
   color: var(--color-text);
 }
 
@@ -228,13 +245,14 @@
   object-position: center;
 }
 
-/* Cream gradient that fades the image into the page background — editorial feel */
+/* Dark scrim at top protects white logo/nav against any image; cream fade at bottom anchors content */
 .hero__overlay {
   background: linear-gradient(
     to bottom,
-    rgb(250 247 242 / 0.1) 0%,
-    rgb(250 247 242 / 0.45) 50%,
-    rgb(250 247 242 / 0.92) 80%,
+    rgb(0 0 0 / 0.35) 0%,
+    rgb(0 0 0 / 0) 18%,
+    rgb(250 247 242 / 0) 50%,
+    rgb(250 247 242 / 0.88) 78%,
     var(--color-bg) 100%
   );
   inset: 0;
@@ -328,18 +346,23 @@
 .destination-card--amalfi {
   grid-area: amalfi;
 }
+
 .destination-card--kyoto {
   grid-area: kyoto;
 }
+
 .destination-card--patagonia {
   grid-area: patagonia;
 }
+
 .destination-card--marrakech {
   grid-area: marrakech;
 }
+
 .destination-card--santorini {
   grid-area: santorini;
 }
+
 .destination-card--maldives {
   grid-area: maldives;
 }
@@ -369,6 +392,11 @@
   flex: 1;
   min-block-size: 0;
   overflow: hidden;
+}
+
+.destination-card__media picture {
+  block-size: 100%;
+  inline-size: 100%;
 }
 
 .destination-card__media img {
@@ -607,6 +635,7 @@
 
 .journey__entry-body picture,
 .journey__entry-body img {
+  block-size: 100%;
   border-radius: var(--radius-md);
   inline-size: 100%;
   overflow: hidden;
@@ -621,6 +650,12 @@
   color: var(--color-text-muted);
   font-size: var(--text-lg);
   line-height: var(--leading-relaxed);
+}
+
+/* ── Mobile journey nav (select replaces sidebar) ── */
+.journey__mobile-nav {
+  display: none;
+  margin-block-end: var(--space-8);
 }
 
 /* ══════════════════════════════════════════════
