@@ -1,0 +1,16 @@
+{
+  "extends": ["stylelint-config-standard"],
+  "plugins": ["stylelint-order"],
+  "rules": {
+    "order/properties-alphabetical-order": true,
+    "alpha-value-notation": null,
+    "declaration-block-no-redundant-longhand-properties": null,
+    "declaration-block-single-line-max-declarations": null,
+    "media-feature-range-notation": null,
+    "property-no-vendor-prefix": [true, {
+      "ignoreProperties": ["-webkit-text-size-adjust"]
+    }],
+    "selector-class-pattern": null,
+    "no-descending-specificity": null
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "name": "meridian-travel",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "prepare": "husky",
+    "lint:js": "eslint js/",
+    "lint:css": "stylelint \"css/*.css\"",
+    "lint:html": "html-validate index.html",
+    "format": "prettier --write .",
+    "lint": "npm run lint:js && npm run lint:css && npm run lint:html",
+    "test": "playwright test"
+  },
+  "lint-staged": {
+    "*.html": [
+      "prettier --write",
+      "html-validate"
+    ],
+    "css/*.css": [
+      "stylelint --fix",
+      "prettier --write"
+    ],
+    "{js,tests}/*.js": [
+      "eslint --fix",
+      "prettier --write"
+    ]
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.40.0",
+    "eslint": "^9.0.0",
+    "globals": "^15.0.0",
+    "html-validate": "^9.0.0",
+    "http-server": "^14.0.0",
+    "husky": "^9.0.0",
+    "lint-staged": "^15.0.0",
+    "prettier": "^3.0.0",
+    "stylelint": "^16.0.0",
+    "stylelint-config-standard": "^36.0.0",
+    "stylelint-order": "^6.0.0"
+  }
+}

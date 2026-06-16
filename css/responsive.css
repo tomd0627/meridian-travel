@@ -1,0 +1,279 @@
+/* ==========================================================================
+   RESPONSIVE
+   Mobile-first breakpoint overrides.
+   Breakpoints: sm=640px  md=768px  lg=1024px  xl=1280px
+
+   Destinations grid RECOMPOSES at each breakpoint — not just stacks.
+   ========================================================================== */
+
+/* ══════════════════════════════════════════════
+   MOBILE BASE  (< 640px)
+   ══════════════════════════════════════════════ */
+
+.nav-toggle {
+  display: flex;
+}
+
+.site-nav {
+  background-color: var(--color-bg);
+  block-size: auto;
+  border-block-start: 1px solid var(--color-border);
+  box-shadow: var(--shadow-md);
+  display: none;
+  inset-block-start: var(--header-height);
+  inset-inline: 0;
+  padding-block: var(--space-6);
+  position: fixed;
+  z-index: calc(var(--z-nav) - 1);
+}
+
+.site-nav.is-open {
+  display: block;
+}
+
+.site-nav__list {
+  align-items: stretch;
+  flex-direction: column;
+  gap: 0;
+  padding-inline: var(--container-padding-inline);
+}
+
+.site-nav__link {
+  display: block;
+  padding-block: var(--space-3);
+}
+
+.site-nav__link.btn--outline {
+  display: inline-flex;
+  margin-block-start: var(--space-4);
+}
+
+/* Destinations: single column on mobile */
+.destinations-grid {
+  grid-template-areas:
+    'amalfi'
+    'kyoto'
+    'patagonia'
+    'marrakech'
+    'santorini'
+    'maldives';
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+}
+
+.destination-card {
+  block-size: auto;
+}
+
+.destination-card__media {
+  aspect-ratio: 16 / 9;
+  flex: unset;
+  min-block-size: unset;
+}
+
+/* Steps: single column on mobile */
+.steps {
+  grid-template-columns: 1fr;
+}
+
+/* Journey: sidebar above content on mobile */
+.journey__layout {
+  grid-template-columns: 1fr;
+}
+
+.journey__sidebar {
+  max-block-size: none;
+  overflow-y: visible;
+  padding-block-start: var(--space-4);
+  position: static;
+}
+
+.journey__day-nav {
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+}
+
+.journey__day-link {
+  border-block-end: 2px solid var(--color-border);
+  border-inline-start: none;
+  padding-block: var(--space-1);
+  padding-inline-start: 0;
+  white-space: nowrap;
+}
+
+.journey__day-link:hover,
+.journey__day-link.is-active {
+  border-block-end-color: var(--color-accent);
+  border-inline-start-color: transparent;
+}
+
+/* Inquiry: single column on mobile */
+.inquire__inner {
+  grid-template-columns: 1fr;
+}
+
+/* Footer: stacked on mobile */
+.site-footer__inner {
+  grid-template-columns: 1fr;
+  text-align: center;
+}
+
+.site-footer__nav ul {
+  justify-content: center;
+}
+
+/* Reduce section padding on mobile */
+section {
+  padding-block: var(--space-16);
+}
+
+.hero__heading {
+  font-size: clamp(var(--text-4xl), 10vw, var(--text-5xl));
+}
+
+.hero__content {
+  inset-block-end: var(--space-16);
+}
+
+/* ══════════════════════════════════════════════
+   SM  (>= 640px)
+   ══════════════════════════════════════════════ */
+
+@media (width >= 640px) {
+  .destination-card__media {
+    aspect-ratio: 4 / 3;
+  }
+
+  .form-field-row {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* ══════════════════════════════════════════════
+   MD  (>= 768px)  — Tablet
+   ══════════════════════════════════════════════ */
+
+@media (width >= 768px) {
+  .nav-toggle {
+    display: none;
+  }
+
+  .site-nav {
+    background-color: transparent;
+    block-size: auto;
+    border-block-start: none;
+    box-shadow: none;
+    display: flex;
+    padding-block: 0;
+    position: static;
+    z-index: auto;
+  }
+
+  .site-nav__list {
+    align-items: center;
+    flex-direction: row;
+    gap: var(--space-8);
+    padding-inline: 0;
+  }
+
+  .site-nav__link {
+    padding-block: 0;
+  }
+
+  /* Destinations: 2-column recomposition */
+  .destinations-grid {
+    grid-template-areas:
+      'amalfi kyoto'
+      'patagonia marrakech'
+      'santorini maldives';
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 22rem 18rem 18rem;
+  }
+
+  .destination-card {
+    block-size: 100%;
+  }
+
+  .destination-card__media {
+    aspect-ratio: unset;
+    flex: 1;
+    min-block-size: 0;
+  }
+
+  /* Steps: 3 columns restored at tablet */
+  .steps {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  /* Journey: restore sidebar */
+  .journey__layout {
+    grid-template-columns: 14rem 1fr;
+  }
+
+  .journey__sidebar {
+    inset-block-start: calc(var(--header-height) + var(--space-8));
+    max-block-size: calc(100vh - var(--header-height) - var(--space-16));
+    overflow-y: auto;
+    position: sticky;
+  }
+
+  .journey__day-nav {
+    flex-direction: column;
+    flex-wrap: nowrap;
+    gap: var(--space-1);
+  }
+
+  .journey__day-link {
+    border-block-end: none;
+    border-inline-start: 2px solid var(--color-border);
+    padding-block: var(--space-2);
+    padding-inline-start: var(--space-4);
+    white-space: normal;
+  }
+
+  .journey__day-link:hover,
+  .journey__day-link.is-active {
+    border-block-end-color: transparent;
+    border-inline-start-color: var(--color-accent);
+  }
+
+  /* Inquiry: 2 columns */
+  .inquire__inner {
+    grid-template-columns: 1fr 1.4fr;
+  }
+
+  section {
+    padding-block: var(--space-24);
+  }
+}
+
+/* ══════════════════════════════════════════════
+   LG  (>= 1024px)  — Desktop
+   ══════════════════════════════════════════════ */
+
+@media (width >= 1024px) {
+  /* Destinations: 3-column recomposition with featured spans */
+  .destinations-grid {
+    grid-template-areas:
+      'amalfi amalfi kyoto'
+      'patagonia marrakech santorini'
+      'maldives maldives maldives';
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 26rem 20rem 16rem;
+  }
+
+  .hero__heading {
+    font-size: clamp(var(--text-5xl), 7vw, var(--text-7xl));
+  }
+
+  .site-footer__inner {
+    align-items: center;
+    grid-template-columns: 1fr auto auto;
+    text-align: start;
+  }
+
+  .site-footer__nav ul {
+    justify-content: flex-end;
+  }
+}

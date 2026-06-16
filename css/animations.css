@@ -1,0 +1,75 @@
+/* ==========================================================================
+   ANIMATIONS
+   Scroll-triggered [data-reveal] reveals, scroll indicator, hover effects.
+   prefers-reduced-motion reset lives here.
+   ========================================================================== */
+
+/* ── [data-reveal] initial state ── */
+[data-reveal] {
+  opacity: 0;
+  transform: translateY(1.5rem);
+  transition:
+    opacity var(--transition-slow),
+    transform var(--transition-slow);
+}
+
+[data-reveal].is-revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Stagger siblings inside a revealed container */
+[data-reveal].is-revealed > *:nth-child(2) {
+  transition-delay: 80ms;
+}
+[data-reveal].is-revealed > *:nth-child(3) {
+  transition-delay: 160ms;
+}
+[data-reveal].is-revealed > *:nth-child(4) {
+  transition-delay: 240ms;
+}
+
+/* Also handle direct [data-reveal] elements with a stagger class */
+.step[data-reveal]:nth-child(2) {
+  transition-delay: 80ms;
+}
+.step[data-reveal]:nth-child(3) {
+  transition-delay: 160ms;
+}
+
+/* ── Scroll indicator animation (CSS-only) ── */
+@keyframes scroll-pulse {
+  0% {
+    transform: scaleY(1);
+    transform-origin: top center;
+  }
+  50% {
+    transform: scaleY(0.35);
+    transform-origin: top center;
+  }
+  100% {
+    transform: scaleY(1);
+    transform-origin: top center;
+  }
+}
+
+.hero__scroll-line {
+  animation: scroll-pulse 2.2s ease-in-out infinite;
+}
+
+/* ── prefers-reduced-motion: respect user preference ── */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  [data-reveal] {
+    opacity: 1;
+    transform: none;
+  }
+}

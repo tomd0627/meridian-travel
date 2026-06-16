@@ -1,0 +1,1053 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Meridian Travel — Luxury Curated Journeys</title>
+    <meta
+      name="description"
+      content="Meridian Travel crafts bespoke luxury journeys to the world's most remarkable destinations. Curated itineraries, expert guidance, extraordinary experiences."
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="preload"
+      as="style"
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garant:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600&display=swap"
+      onload="
+        this.onload = null;
+        this.rel = 'stylesheet';
+      "
+    />
+    <noscript
+      ><link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garant:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600&display=swap"
+    /></noscript>
+
+    <link rel="stylesheet" href="css/tokens.css" />
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/layout.css" />
+    <link rel="stylesheet" href="css/components.css" />
+    <link rel="stylesheet" href="css/animations.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+
+    <header class="site-header" id="site-header">
+      <div class="container site-header__inner">
+        <a class="site-logo" href="/" aria-label="Meridian Travel — Return to homepage">Meridian</a>
+
+        <nav class="site-nav" id="site-nav" aria-label="Primary navigation">
+          <ul class="site-nav__list" role="list">
+            <li><a class="site-nav__link" href="#destinations">Destinations</a></li>
+            <li><a class="site-nav__link" href="#how-it-works">How It Works</a></li>
+            <li><a class="site-nav__link" href="#featured-journey">Featured Journey</a></li>
+            <li>
+              <a class="site-nav__link btn btn--outline" href="#inquire">Plan Your Journey</a>
+            </li>
+          </ul>
+        </nav>
+
+        <button
+          class="nav-toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="site-nav"
+          aria-label="Open navigation menu"
+        >
+          <svg
+            aria-hidden="true"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 256 256"
+            fill="currentColor"
+            width="24"
+            height="24"
+          >
+            <path
+              d="M224,128a8,8,0,0,1-8,8H40a8,8,0,0,1,0-16H216A8,8,0,0,1,224,128ZM40,72H216a8,8,0,0,0,0-16H40a8,8,0,0,0,0,16ZM216,184H40a8,8,0,0,0,0,16H216a8,8,0,0,0,0-16Z"
+            />
+          </svg>
+          <svg
+            class="nav-toggle__close"
+            aria-hidden="true"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 256 256"
+            fill="currentColor"
+            width="24"
+            height="24"
+          >
+            <path
+              d="M205.66,194.34a8,8,0,0,1-11.32,11.32L128,139.31,61.66,205.66a8,8,0,0,1-11.32-11.32L116.69,128,50.34,61.66A8,8,0,0,1,61.66,50.34L128,116.69l66.34-66.35a8,8,0,0,1,11.32,11.32L139.31,128Z"
+            />
+          </svg>
+        </button>
+      </div>
+    </header>
+
+    <main id="main-content" tabindex="-1">
+      <!-- ==================== HERO ==================== -->
+      <section class="hero" aria-labelledby="hero-heading">
+        <div class="hero__media">
+          <picture>
+            <source srcset="images/hero/hero.avif" type="image/avif" />
+            <source srcset="images/hero/hero.webp" type="image/webp" />
+            <img
+              class="hero__img"
+              src="images/hero/hero.svg"
+              alt="Aerial view of the Amalfi Coast — terracotta rooftops cascading toward a shimmering turquoise sea"
+              width="1920"
+              height="1080"
+              fetchpriority="high"
+            />
+          </picture>
+        </div>
+
+        <div class="hero__overlay" aria-hidden="true"></div>
+
+        <div class="hero__content">
+          <div class="container">
+            <p class="hero__eyebrow">Luxury Travel, Reimagined</p>
+            <h1 id="hero-heading" class="hero__heading">
+              The World Awaits,<br />
+              <em>Curated for You</em>
+            </h1>
+            <p class="hero__body">
+              From the cliffs of Positano to the temples of Kyoto, Meridian crafts journeys that
+              transcend the ordinary — every detail considered, every moment extraordinary.
+            </p>
+            <a class="btn btn--primary btn--lg" href="#inquire">Plan Your Journey</a>
+          </div>
+        </div>
+
+        <div class="hero__scroll-indicator" aria-hidden="true">
+          <span class="hero__scroll-line"></span>
+          <span class="hero__scroll-label">Scroll</span>
+        </div>
+      </section>
+
+      <!-- ==================== DESTINATIONS ==================== -->
+      <section id="destinations" class="destinations" aria-labelledby="destinations-heading">
+        <div class="container">
+          <header class="section-header" data-reveal>
+            <p class="section-eyebrow">Where Will You Go</p>
+            <h2 id="destinations-heading" class="section-title">Curated Destinations</h2>
+            <p class="section-body">
+              Six of the world's most captivating places, each offering an unrepeatable experience.
+              Every destination hand-selected for its character, its beauty, and its power to
+              transform.
+            </p>
+          </header>
+
+          <ul class="destinations-grid" role="list">
+            <li class="destination-card destination-card--amalfi">
+              <a
+                class="destination-card__link"
+                href="#inquire"
+                aria-label="Explore the Amalfi Coast — enquire about this destination"
+              >
+                <div class="destination-card__media">
+                  <picture>
+                    <source srcset="images/destinations/amalfi-coast.avif" type="image/avif" />
+                    <source srcset="images/destinations/amalfi-coast.webp" type="image/webp" />
+                    <img
+                      src="images/destinations/amalfi-coast.svg"
+                      alt="Colourful villages cascading down the Amalfi Coast cliffs above a vivid blue sea"
+                      width="800"
+                      height="600"
+                      loading="lazy"
+                    />
+                  </picture>
+                </div>
+                <div class="destination-card__body">
+                  <p class="destination-card__region">Southern Italy</p>
+                  <h3 class="destination-card__name">Amalfi Coast</h3>
+                  <p class="destination-card__desc">
+                    Terracotta villages clinging to limestone cliffs above a sea that changes colour
+                    with every hour of light.
+                  </p>
+                  <span class="destination-card__cta" aria-hidden="true">Explore</span>
+                </div>
+              </a>
+            </li>
+
+            <li class="destination-card destination-card--kyoto">
+              <a
+                class="destination-card__link"
+                href="#inquire"
+                aria-label="Explore Kyoto — enquire about this destination"
+              >
+                <div class="destination-card__media">
+                  <picture>
+                    <source srcset="images/destinations/kyoto.avif" type="image/avif" />
+                    <source srcset="images/destinations/kyoto.webp" type="image/webp" />
+                    <img
+                      src="images/destinations/kyoto.svg"
+                      alt="Ancient Fushimi Inari torii gates winding through cedar forest at dawn"
+                      width="600"
+                      height="800"
+                      loading="lazy"
+                    />
+                  </picture>
+                </div>
+                <div class="destination-card__body">
+                  <p class="destination-card__region">Japan</p>
+                  <h3 class="destination-card__name">Kyoto</h3>
+                  <p class="destination-card__desc">
+                    Seventeen UNESCO World Heritage sites, an unbroken thread of imperial culture,
+                    and ryokan hospitality at its most refined.
+                  </p>
+                  <span class="destination-card__cta" aria-hidden="true">Explore</span>
+                </div>
+              </a>
+            </li>
+
+            <li class="destination-card destination-card--patagonia">
+              <a
+                class="destination-card__link"
+                href="#inquire"
+                aria-label="Explore Patagonia — enquire about this destination"
+              >
+                <div class="destination-card__media">
+                  <picture>
+                    <source srcset="images/destinations/patagonia.avif" type="image/avif" />
+                    <source srcset="images/destinations/patagonia.webp" type="image/webp" />
+                    <img
+                      src="images/destinations/patagonia.svg"
+                      alt="Torres del Paine granite spires reflected in a glacial lake at sunrise"
+                      width="600"
+                      height="400"
+                      loading="lazy"
+                    />
+                  </picture>
+                </div>
+                <div class="destination-card__body">
+                  <p class="destination-card__region">Southern Argentina &amp; Chile</p>
+                  <h3 class="destination-card__name">Patagonia</h3>
+                  <p class="destination-card__desc">
+                    At the edge of the world, granite towers pierce a sky that stretches without
+                    horizon — wild, humbling, and spectacularly alive.
+                  </p>
+                  <span class="destination-card__cta" aria-hidden="true">Explore</span>
+                </div>
+              </a>
+            </li>
+
+            <li class="destination-card destination-card--marrakech">
+              <a
+                class="destination-card__link"
+                href="#inquire"
+                aria-label="Explore Marrakech — enquire about this destination"
+              >
+                <div class="destination-card__media">
+                  <picture>
+                    <source srcset="images/destinations/marrakech.avif" type="image/avif" />
+                    <source srcset="images/destinations/marrakech.webp" type="image/webp" />
+                    <img
+                      src="images/destinations/marrakech.svg"
+                      alt="Intricate mosaic tilework in a Marrakech riad courtyard with a central fountain"
+                      width="600"
+                      height="400"
+                      loading="lazy"
+                    />
+                  </picture>
+                </div>
+                <div class="destination-card__body">
+                  <p class="destination-card__region">Morocco</p>
+                  <h3 class="destination-card__name">Marrakech</h3>
+                  <p class="destination-card__desc">
+                    Labyrinthine medinas, candlelit riads, and souks fragrant with saffron and rose
+                    petals — the senses never rest.
+                  </p>
+                  <span class="destination-card__cta" aria-hidden="true">Explore</span>
+                </div>
+              </a>
+            </li>
+
+            <li class="destination-card destination-card--santorini">
+              <a
+                class="destination-card__link"
+                href="#inquire"
+                aria-label="Explore Santorini — enquire about this destination"
+              >
+                <div class="destination-card__media">
+                  <picture>
+                    <source srcset="images/destinations/santorini.avif" type="image/avif" />
+                    <source srcset="images/destinations/santorini.webp" type="image/webp" />
+                    <img
+                      src="images/destinations/santorini.svg"
+                      alt="Whitewashed Santorini buildings with blue domes overlooking the Aegean caldera at sunset"
+                      width="600"
+                      height="400"
+                      loading="lazy"
+                    />
+                  </picture>
+                </div>
+                <div class="destination-card__body">
+                  <p class="destination-card__region">Greece</p>
+                  <h3 class="destination-card__name">Santorini</h3>
+                  <p class="destination-card__desc">
+                    Carved into the rim of a caldera, each whitewashed terrace watches the sun
+                    dissolve into the Aegean in colours no photograph can hold.
+                  </p>
+                  <span class="destination-card__cta" aria-hidden="true">Explore</span>
+                </div>
+              </a>
+            </li>
+
+            <li class="destination-card destination-card--maldives">
+              <a
+                class="destination-card__link"
+                href="#inquire"
+                aria-label="Explore the Maldives — enquire about this destination"
+              >
+                <div class="destination-card__media">
+                  <picture>
+                    <source srcset="images/destinations/maldives.avif" type="image/avif" />
+                    <source srcset="images/destinations/maldives.webp" type="image/webp" />
+                    <img
+                      src="images/destinations/maldives.svg"
+                      alt="Overwater bungalows extending over crystal-clear turquoise lagoon in the Maldives"
+                      width="1200"
+                      height="500"
+                      loading="lazy"
+                    />
+                  </picture>
+                </div>
+                <div class="destination-card__body">
+                  <p class="destination-card__region">Indian Ocean</p>
+                  <h3 class="destination-card__name">Maldives</h3>
+                  <p class="destination-card__desc">
+                    A constellation of atolls adrift in the world's clearest water, where overwater
+                    bungalows open onto a horizon of perfect blue.
+                  </p>
+                  <span class="destination-card__cta" aria-hidden="true">Explore</span>
+                </div>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- ==================== HOW IT WORKS ==================== -->
+      <section id="how-it-works" class="how-it-works" aria-labelledby="how-heading">
+        <div class="container">
+          <header class="section-header" data-reveal>
+            <p class="section-eyebrow">The Meridian Difference</p>
+            <h2 id="how-heading" class="section-title">A Journey Built Around You</h2>
+          </header>
+
+          <ol class="steps">
+            <li class="step" data-reveal>
+              <div class="step__icon" aria-hidden="true">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 256 256"
+                  fill="currentColor"
+                  width="48"
+                  height="48"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm0,192a88,88,0,1,1,88-88A88.1,88.1,0,0,1,128,216ZM172.42,72.84l-64,32a8.05,8.05,0,0,0-3.58,3.58l-32,64A8,8,0,0,0,80,184a8.1,8.1,0,0,0,3.58-.84l64-32a8.05,8.05,0,0,0,3.58-3.58l32-64a8,8,0,0,0-10.74-10.74ZM138,138,97.89,158.11,118,118l40.15-20.07Z"
+                  />
+                </svg>
+              </div>
+              <div class="step__content">
+                <span class="step__number" aria-hidden="true">01</span>
+                <h3 class="step__title">Consult</h3>
+                <p class="step__body">
+                  Your journey begins with a conversation. We take the time to understand your
+                  travel style, your interests, and your vision of the extraordinary — then we
+                  listen for everything in between.
+                </p>
+              </div>
+            </li>
+
+            <li class="step" data-reveal>
+              <div class="step__icon" aria-hidden="true">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 256 256"
+                  fill="currentColor"
+                  width="48"
+                  height="48"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M197.58,129.06,146,110l-19-51.62a15.92,15.92,0,0,0-29.88,0L78,110l-51.62,19a15.92,15.92,0,0,0,0,29.88L78,178l19,51.62a15.92,15.92,0,0,0,29.88,0L146,178l51.62-19a15.92,15.92,0,0,0,0-29.88ZM137,164.22a8,8,0,0,0-4.74,4.74L112,223.85,91.78,169A8,8,0,0,0,87,164.22L32.15,144,87,123.78A8,8,0,0,0,91.78,119L112,64.15,132.22,119a8,8,0,0,0,4.74,4.74L191.85,144ZM144,40a8,8,0,0,1,8-8h16V16a8,8,0,0,1,16,0V32h16a8,8,0,0,1,0,16H184V64a8,8,0,0,1-16,0V48H152A8,8,0,0,1,144,40ZM248,88a8,8,0,0,1-8,8h-8v8a8,8,0,0,1-16,0V96h-8a8,8,0,0,1,0-16h8V72a8,8,0,0,1,16,0v8h8A8,8,0,0,1,248,88Z"
+                  />
+                </svg>
+              </div>
+              <div class="step__content">
+                <span class="step__number" aria-hidden="true">02</span>
+                <h3 class="step__title">Curate</h3>
+                <p class="step__body">
+                  Our travel designers craft a bespoke itinerary built entirely around you —
+                  exclusive properties, private experiences, and seamless logistics that let you be
+                  present for every moment that matters.
+                </p>
+              </div>
+            </li>
+
+            <li class="step" data-reveal>
+              <div class="step__icon" aria-hidden="true">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 256 256"
+                  fill="currentColor"
+                  width="48"
+                  height="48"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M185.33,114.21l29.14-27.42.17-.17a32,32,0,0,0-45.26-45.26c0,.06-.11.11-.17.17L141.79,70.67l-83-30.2a8,8,0,0,0-8.39,1.86l-24,24a8,8,0,0,0,1.22,12.31l63.89,42.59L76.69,136H56a8,8,0,0,0-5.65,2.34l-24,24A8,8,0,0,0,29,175.42l36.82,14.73,14.7,36.75.06.16a8,8,0,0,0,13.18,2.47l23.87-23.88A8,8,0,0,0,120,200V179.31l14.76-14.76,42.59,63.89a8,8,0,0,0,12.31,1.22l24-24a8,8,0,0,0,1.86-8.39Zm-.07,97.23-42.59-63.88A8,8,0,0,0,136.8,144c-.27,0-.53,0-.79,0a8,8,0,0,0-5.66,2.35l-24,24A8,8,0,0,0,104,176v20.69L90.93,209.76,79.43,181A8,8,0,0,0,75,176.57l-28.74-11.5L59.32,152H80a8,8,0,0,0,5.66-2.34l24-24a8,8,0,0,0-1.22-12.32L44.56,70.74l13.5-13.49,83.22,30.26a8,8,0,0,0,8.56-2L180.78,52.6A16,16,0,0,1,203.4,75.23l-32.87,30.93a8,8,0,0,0-2,8.56l30.26,83.22Z"
+                  />
+                </svg>
+              </div>
+              <div class="step__content">
+                <span class="step__number" aria-hidden="true">03</span>
+                <h3 class="step__title">Travel</h3>
+                <p class="step__body">
+                  You go. We ensure everything is in place. From airport transfers to private
+                  guides, a dedicated Meridian advisor is reachable throughout your journey — so the
+                  only thing on your mind is wonder.
+                </p>
+              </div>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <!-- ==================== FEATURED JOURNEY ==================== -->
+      <section id="featured-journey" class="journey" aria-labelledby="journey-heading">
+        <div class="container">
+          <header class="section-header" data-reveal>
+            <p class="section-eyebrow">Featured Itinerary</p>
+            <h2 id="journey-heading" class="section-title">10 Days in Japan</h2>
+            <p class="section-body">
+              Tokyo to Kyoto — a journey through the tension between ancient ritual and relentless
+              modernity, distilled into ten extraordinary days.
+            </p>
+          </header>
+
+          <div class="journey__layout">
+            <nav class="journey__sidebar" aria-label="Journey itinerary days">
+              <p class="journey__sidebar-title">Itinerary</p>
+              <ol class="journey__day-nav">
+                <li>
+                  <a class="journey__day-link is-active" href="#day-1">Day 1 — Arrival in Tokyo</a>
+                </li>
+                <li>
+                  <a class="journey__day-link" href="#day-2">Day 2 — Shibuya &amp; Omotesando</a>
+                </li>
+                <li><a class="journey__day-link" href="#day-3">Day 3 — Old Tokyo</a></li>
+                <li><a class="journey__day-link" href="#day-4">Day 4 — Day Trip to Nikkō</a></li>
+                <li><a class="journey__day-link" href="#day-5">Day 5 — Hakone Ryokan</a></li>
+                <li><a class="journey__day-link" href="#day-6">Day 6 — Arashiyama, Kyoto</a></li>
+                <li>
+                  <a class="journey__day-link" href="#day-7">Day 7 — Fushimi Inari &amp; Gion</a>
+                </li>
+                <li>
+                  <a class="journey__day-link" href="#day-8">Day 8 — Nishiki &amp; Temples</a>
+                </li>
+                <li><a class="journey__day-link" href="#day-9">Day 9 — Nara</a></li>
+                <li><a class="journey__day-link" href="#day-10">Day 10 — Farewell</a></li>
+              </ol>
+            </nav>
+
+            <div class="journey__content">
+              <article class="journey__entry" id="day-1" data-day="1">
+                <header class="journey__entry-header">
+                  <span class="journey__entry-num" aria-hidden="true">Day 01</span>
+                  <h3 class="journey__entry-title">
+                    Arrival in Tokyo: Shinjuku and First Impressions
+                  </h3>
+                </header>
+                <div class="journey__entry-body">
+                  <picture>
+                    <source srcset="images/journey/day-01.avif" type="image/avif" />
+                    <source srcset="images/journey/day-01.webp" type="image/webp" />
+                    <img
+                      src="images/journey/day-01.svg"
+                      alt="Tokyo skyline at dusk — neon lights reflected in rain-slicked streets below a dramatic sky"
+                      width="800"
+                      height="500"
+                      loading="lazy"
+                    />
+                  </picture>
+                  <p>
+                    Your journey begins the moment you land. After a private transfer to your
+                    Shinjuku hotel, the afternoon is yours — step into the controlled chaos of
+                    Kabukicho, find a quiet ramen bar in Golden Gai, or simply let the city find
+                    you. Tonight: dinner at a standing sushi counter, the first lesson in how Japan
+                    operates at a different frequency.
+                  </p>
+                </div>
+              </article>
+
+              <article class="journey__entry" id="day-2" data-day="2">
+                <header class="journey__entry-header">
+                  <span class="journey__entry-num" aria-hidden="true">Day 02</span>
+                  <h3 class="journey__entry-title">Shibuya, Harajuku, and Omotesando</h3>
+                </header>
+                <div class="journey__entry-body">
+                  <picture>
+                    <source srcset="images/journey/day-02.avif" type="image/avif" />
+                    <source srcset="images/journey/day-02.webp" type="image/webp" />
+                    <img
+                      src="images/journey/day-02.svg"
+                      alt="Shibuya Crossing from above — a sea of umbrellas converging from every direction at rush hour"
+                      width="800"
+                      height="500"
+                      loading="lazy"
+                    />
+                  </picture>
+                  <p>
+                    Start at Shibuya Crossing — nowhere else in the world generates quite this much
+                    organised kinetic energy. Move through Harajuku's side streets into the
+                    zelkova-lined Omotesando, Tokyo's most architecturally self-conscious boulevard.
+                    Lunch at a rooftop terrace in Aoyama; afternoon at the Nezu Museum garden, where
+                    stone lanterns stand in deliberate silence.
+                  </p>
+                </div>
+              </article>
+
+              <article class="journey__entry" id="day-3" data-day="3">
+                <header class="journey__entry-header">
+                  <span class="journey__entry-num" aria-hidden="true">Day 03</span>
+                  <h3 class="journey__entry-title">Old Tokyo: Tsukiji, teamLab, and Ginza</h3>
+                </header>
+                <div class="journey__entry-body">
+                  <picture>
+                    <source srcset="images/journey/day-03.avif" type="image/avif" />
+                    <source srcset="images/journey/day-03.webp" type="image/webp" />
+                    <img
+                      src="images/journey/day-03.svg"
+                      alt="Tsukiji outer market stalls brimming with fresh seafood and street food at dawn"
+                      width="800"
+                      height="500"
+                      loading="lazy"
+                    />
+                  </picture>
+                  <p>
+                    Dawn at Tsukiji Outer Market, where the city's relationship with the sea is on
+                    unashamed display. Mid-morning: the digital art universe of teamLab Borderless,
+                    where the boundary between observer and artwork ceases to exist. Afternoon in
+                    Ginza — the Itoya flagship for stationery, the Ginza Six terrace for a vantage
+                    point. Evening: a reservation at a ten-seat omakase counter.
+                  </p>
+                </div>
+              </article>
+
+              <article class="journey__entry" id="day-4" data-day="4">
+                <header class="journey__entry-header">
+                  <span class="journey__entry-num" aria-hidden="true">Day 04</span>
+                  <h3 class="journey__entry-title">
+                    Day Trip to Nikkō: Gold Leaf and Cedar Avenues
+                  </h3>
+                </header>
+                <div class="journey__entry-body">
+                  <picture>
+                    <source srcset="images/journey/day-04.avif" type="image/avif" />
+                    <source srcset="images/journey/day-04.webp" type="image/webp" />
+                    <img
+                      src="images/journey/day-04.svg"
+                      alt="Tōshō-gū shrine gate adorned with intricate gold and lacquer carvings among cedar trees"
+                      width="800"
+                      height="500"
+                      loading="lazy"
+                    />
+                  </picture>
+                  <p>
+                    An early Shinkansen north brings you to Nikkō, where the extravagance of the
+                    Tōshō-gū shrine complex is unapologetically at odds with the restrained
+                    aesthetic of much of Japanese design — and all the more fascinating for it. The
+                    approach through ancient cedar avenues is one of Japan's great ceremonial
+                    experiences. Return to Tokyo by early evening.
+                  </p>
+                </div>
+              </article>
+
+              <article class="journey__entry" id="day-5" data-day="5">
+                <header class="journey__entry-header">
+                  <span class="journey__entry-num" aria-hidden="true">Day 05</span>
+                  <h3 class="journey__entry-title">Hakone: Ryokan Night and Mount Fuji Views</h3>
+                </header>
+                <div class="journey__entry-body">
+                  <picture>
+                    <source srcset="images/journey/day-05.avif" type="image/avif" />
+                    <source srcset="images/journey/day-05.webp" type="image/webp" />
+                    <img
+                      src="images/journey/day-05.svg"
+                      alt="Mount Fuji reflected in Lake Ashi on a perfectly still morning, framed by pine trees"
+                      width="800"
+                      height="500"
+                      loading="lazy"
+                    />
+                  </picture>
+                  <p>
+                    The romance of Japan lives, in part, in the ryokan experience. Your night in
+                    Hakone — tatami rooms, communal onsen fed by volcanic springs, and a
+                    multi-course kaiseki dinner that takes three hours and tastes like a manifesto —
+                    is the pivot point of the trip. If the weather is kind, Fuji appears across Lake
+                    Ashi in a silence that needs no description.
+                  </p>
+                </div>
+              </article>
+
+              <article class="journey__entry" id="day-6" data-day="6">
+                <header class="journey__entry-header">
+                  <span class="journey__entry-num" aria-hidden="true">Day 06</span>
+                  <h3 class="journey__entry-title">
+                    Shinkansen to Kyoto: Arashiyama and the Bamboo Grove
+                  </h3>
+                </header>
+                <div class="journey__entry-body">
+                  <picture>
+                    <source srcset="images/journey/day-06.avif" type="image/avif" />
+                    <source srcset="images/journey/day-06.webp" type="image/webp" />
+                    <img
+                      src="images/journey/day-06.svg"
+                      alt="Bamboo grove in Arashiyama — towering green canes filtering soft morning light into cathedral silence"
+                      width="800"
+                      height="500"
+                      loading="lazy"
+                    />
+                  </picture>
+                  <p>
+                    The Shinkansen to Kyoto runs so smoothly it feels fictional. Arrive mid-morning
+                    and head directly to Arashiyama before the crowds arrive in force. The bamboo
+                    grove is ten minutes of near-religious experience — the sound alone, the way
+                    light fractures through the canopy — then Tenryū-ji garden, then a slow lunch by
+                    the Ōi River. Your Kyoto hotel awaits: a converted machiya townhouse in
+                    Higashiyama.
+                  </p>
+                </div>
+              </article>
+
+              <article class="journey__entry" id="day-7" data-day="7">
+                <header class="journey__entry-header">
+                  <span class="journey__entry-num" aria-hidden="true">Day 07</span>
+                  <h3 class="journey__entry-title">Fushimi Inari and Gion at Dusk</h3>
+                </header>
+                <div class="journey__entry-body">
+                  <picture>
+                    <source srcset="images/journey/day-07.avif" type="image/avif" />
+                    <source srcset="images/journey/day-07.webp" type="image/webp" />
+                    <img
+                      src="images/journey/day-07.svg"
+                      alt="A tunnel of vermilion torii gates climbing the forested slopes of Fushimi Inari at sunrise"
+                      width="800"
+                      height="500"
+                      loading="lazy"
+                    />
+                  </picture>
+                  <p>
+                    Rise before dawn and reach Fushimi Inari at first light, when the thousands of
+                    torii gates belong only to you and the mountain. The full ascent takes two hours
+                    and rewards with a view across the entire city. Afternoon: Gion's cobblestone
+                    lanes as the light turns amber, the possibility of a chance encounter with a
+                    maiko on her way to an evening engagement. Dinner at a kappo restaurant
+                    overlooking the Kamo River.
+                  </p>
+                </div>
+              </article>
+
+              <article class="journey__entry" id="day-8" data-day="8">
+                <header class="journey__entry-header">
+                  <span class="journey__entry-num" aria-hidden="true">Day 08</span>
+                  <h3 class="journey__entry-title">
+                    Nishiki Market, the Philosopher's Path, and Temple-Hopping
+                  </h3>
+                </header>
+                <div class="journey__entry-body">
+                  <picture>
+                    <source srcset="images/journey/day-08.avif" type="image/avif" />
+                    <source srcset="images/journey/day-08.webp" type="image/webp" />
+                    <img
+                      src="images/journey/day-08.svg"
+                      alt="The Philosopher's Path in Kyoto — a canal walkway lined with cherry blossom trees in full bloom"
+                      width="800"
+                      height="500"
+                      loading="lazy"
+                    />
+                  </picture>
+                  <p>
+                    Nishiki Market — Kyoto's kitchen — is five alleyway blocks of pickled plum,
+                    grilled skewers, tofu shops, and knife vendors that have occupied this space for
+                    four centuries. Then: the Philosopher's Path, a canal walkway designed for
+                    precisely the kind of unhurried thinking its name implies. Afternoon: Nanzen-ji,
+                    Heian Jingū, the Kyoto National Museum. Today is a full immersion in why Kyoto
+                    is classified as an open-air museum.
+                  </p>
+                </div>
+              </article>
+
+              <article class="journey__entry" id="day-9" data-day="9">
+                <header class="journey__entry-header">
+                  <span class="journey__entry-num" aria-hidden="true">Day 09</span>
+                  <h3 class="journey__entry-title">Day Trip to Nara: Sacred Deer and Tōdai-ji</h3>
+                </header>
+                <div class="journey__entry-body">
+                  <picture>
+                    <source srcset="images/journey/day-09.avif" type="image/avif" />
+                    <source srcset="images/journey/day-09.webp" type="image/webp" />
+                    <img
+                      src="images/journey/day-09.svg"
+                      alt="Sacred deer grazing freely among lantern-lined paths in Nara Park at golden hour"
+                      width="800"
+                      height="500"
+                      loading="lazy"
+                    />
+                  </picture>
+                  <p>
+                    A short train journey delivers you to Nara, Japan's first permanent capital,
+                    where over a thousand deer wander the parkland as living heritage — considered
+                    messengers of the gods, protected by law, entirely unfazed by human presence. At
+                    the centre of it all: Tōdai-ji, housing a bronze Buddha fifteen metres tall that
+                    has presided over the valley since 752 CE. Return to Kyoto in the late afternoon
+                    for a final evening in Gion.
+                  </p>
+                </div>
+              </article>
+
+              <article class="journey__entry" id="day-10" data-day="10">
+                <header class="journey__entry-header">
+                  <span class="journey__entry-num" aria-hidden="true">Day 10</span>
+                  <h3 class="journey__entry-title">Departure: Kyoto Station Farewell</h3>
+                </header>
+                <div class="journey__entry-body">
+                  <picture>
+                    <source srcset="images/journey/day-10.avif" type="image/avif" />
+                    <source srcset="images/journey/day-10.webp" type="image/webp" />
+                    <img
+                      src="images/journey/day-10.svg"
+                      alt="The grand atrium of Kyoto Station at dawn — soaring steel and glass architecture in quiet morning light"
+                      width="800"
+                      height="500"
+                      loading="lazy"
+                    />
+                  </picture>
+                  <p>
+                    Kyoto Station is, unexpectedly, an architectural event in itself — Hiroshi
+                    Hara's steel and glass cathedral to movement, all soaring angles and escalators
+                    that lead nowhere in particular and everywhere at once. After a final morning
+                    walk through Higashiyama, your private transfer departs for Osaka Kansai
+                    International Airport. Japan does not let you go easily. That is, of course, the
+                    point.
+                  </p>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==================== INQUIRY FORM ==================== -->
+      <section id="inquire" class="inquire" aria-labelledby="inquire-heading">
+        <div class="container">
+          <div class="inquire__inner">
+            <header class="section-header section-header--left">
+              <p class="section-eyebrow">Get in Touch</p>
+              <h2 id="inquire-heading" class="section-title">Begin Your Journey</h2>
+              <p class="section-body">
+                Tell us about your dream trip and a Meridian travel designer will be in touch within
+                24 hours to begin crafting your itinerary.
+              </p>
+            </header>
+
+            <div class="form-wrapper">
+              <div class="form-progress" aria-hidden="true">
+                <div class="form-progress__step is-active" data-step="1">
+                  <span class="form-progress__num">1</span>
+                  <span class="form-progress__label">Your Destination</span>
+                </div>
+                <div class="form-progress__track"></div>
+                <div class="form-progress__step" data-step="2">
+                  <span class="form-progress__num">2</span>
+                  <span class="form-progress__label">Your Details</span>
+                </div>
+              </div>
+
+              <form class="inquiry-form" id="inquiry-form" novalidate>
+                <fieldset
+                  class="form-step is-active"
+                  id="form-step-1"
+                  aria-labelledby="step-1-legend"
+                >
+                  <legend id="step-1-legend" class="form-step__legend">
+                    Where would you like to travel?
+                  </legend>
+
+                  <div class="form-field">
+                    <label class="form-label" for="destination">
+                      Destination of Interest
+                      <span class="form-required" aria-hidden="true">*</span>
+                    </label>
+                    <div class="form-select-wrap">
+                      <select
+                        class="form-select"
+                        id="destination"
+                        name="destination"
+                        required
+                        aria-describedby="destination-error"
+                        aria-required="true"
+                      >
+                        <option value="">Select a destination…</option>
+                        <option value="amalfi-coast">Amalfi Coast</option>
+                        <option value="kyoto">Kyoto</option>
+                        <option value="patagonia">Patagonia</option>
+                        <option value="marrakech">Marrakech</option>
+                        <option value="santorini">Santorini</option>
+                        <option value="maldives">Maldives</option>
+                        <option value="multiple">Multiple Destinations</option>
+                      </select>
+                      <span class="form-select-arrow" aria-hidden="true">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          viewBox="0 0 256 256"
+                          fill="currentColor"
+                          width="16"
+                          height="16"
+                          aria-hidden="true"
+                        >
+                          <path
+                            d="M213.66,101.66l-80,80a8,8,0,0,1-11.32,0l-80-80A8,8,0,0,1,53.66,90.34L128,164.69l74.34-74.35a8,8,0,0,1,11.32,11.32Z"
+                          />
+                        </svg>
+                      </span>
+                    </div>
+                    <p
+                      class="form-error"
+                      id="destination-error"
+                      role="alert"
+                      aria-atomic="true"
+                    ></p>
+                  </div>
+
+                  <div class="form-field-row">
+                    <div class="form-field">
+                      <label class="form-label" for="date-departure">
+                        Departure Date
+                        <span class="form-required" aria-hidden="true">*</span>
+                      </label>
+                      <input
+                        class="form-input"
+                        type="date"
+                        id="date-departure"
+                        name="date-departure"
+                        required
+                        aria-describedby="date-departure-error"
+                        aria-required="true"
+                      />
+                      <p
+                        class="form-error"
+                        id="date-departure-error"
+                        role="alert"
+                        aria-atomic="true"
+                      ></p>
+                    </div>
+                    <div class="form-field">
+                      <label class="form-label" for="date-return">
+                        Return Date
+                        <span class="form-required" aria-hidden="true">*</span>
+                      </label>
+                      <input
+                        class="form-input"
+                        type="date"
+                        id="date-return"
+                        name="date-return"
+                        required
+                        aria-describedby="date-return-error"
+                        aria-required="true"
+                      />
+                      <p
+                        class="form-error"
+                        id="date-return-error"
+                        role="alert"
+                        aria-atomic="true"
+                      ></p>
+                    </div>
+                  </div>
+
+                  <div class="form-actions">
+                    <button class="btn btn--primary" type="button" id="step-1-next">
+                      Continue to Your Details
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 256 256"
+                        fill="currentColor"
+                        width="16"
+                        height="16"
+                        aria-hidden="true"
+                      >
+                        <path
+                          d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"
+                        />
+                      </svg>
+                    </button>
+                  </div>
+                </fieldset>
+
+                <fieldset class="form-step" id="form-step-2" aria-labelledby="step-2-legend" hidden>
+                  <legend id="step-2-legend" class="form-step__legend">
+                    Tell us about yourself
+                  </legend>
+
+                  <div class="form-field">
+                    <label class="form-label" for="name">
+                      Full Name
+                      <span class="form-required" aria-hidden="true">*</span>
+                    </label>
+                    <input
+                      class="form-input"
+                      type="text"
+                      id="name"
+                      name="name"
+                      autocomplete="name"
+                      required
+                      aria-describedby="name-error"
+                      aria-required="true"
+                    />
+                    <p class="form-error" id="name-error" role="alert" aria-atomic="true"></p>
+                  </div>
+
+                  <div class="form-field">
+                    <label class="form-label" for="email">
+                      Email Address
+                      <span class="form-required" aria-hidden="true">*</span>
+                    </label>
+                    <input
+                      class="form-input"
+                      type="email"
+                      id="email"
+                      name="email"
+                      autocomplete="email"
+                      required
+                      aria-describedby="email-error"
+                      aria-required="true"
+                    />
+                    <p class="form-error" id="email-error" role="alert" aria-atomic="true"></p>
+                  </div>
+
+                  <div class="form-field form-field--half">
+                    <label class="form-label" for="group-size">
+                      Group Size
+                      <span class="form-required" aria-hidden="true">*</span>
+                    </label>
+                    <input
+                      class="form-input"
+                      type="number"
+                      id="group-size"
+                      name="group-size"
+                      min="1"
+                      max="50"
+                      required
+                      aria-describedby="group-size-error"
+                      aria-required="true"
+                    />
+                    <p class="form-error" id="group-size-error" role="alert" aria-atomic="true"></p>
+                  </div>
+
+                  <div class="form-field">
+                    <label class="form-label" for="requests">
+                      Special Requests
+                      <span class="form-label-optional">(optional)</span>
+                    </label>
+                    <textarea
+                      class="form-textarea"
+                      id="requests"
+                      name="requests"
+                      rows="4"
+                      placeholder="Dietary requirements, accessibility needs, anniversary celebrations, any details that make your trip uniquely yours…"
+                    ></textarea>
+                  </div>
+
+                  <div class="form-actions form-actions--split">
+                    <button class="btn btn--ghost" type="button" id="step-2-back">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 256 256"
+                        fill="currentColor"
+                        width="16"
+                        height="16"
+                        aria-hidden="true"
+                      >
+                        <path
+                          d="M224,128a8,8,0,0,1-8,8H59.31l58.35,58.34a8,8,0,0,1-11.32,11.32l-72-72a8,8,0,0,1,0-11.32l72-72a8,8,0,0,1,11.32,11.32L59.31,120H216A8,8,0,0,1,224,128Z"
+                        />
+                      </svg>
+                      Back
+                    </button>
+                    <button class="btn btn--primary" type="submit">Send My Enquiry</button>
+                  </div>
+                </fieldset>
+              </form>
+
+              <div class="form-confirmation" id="form-confirmation" hidden role="status">
+                <div class="form-confirmation__inner">
+                  <div class="form-confirmation__icon" aria-hidden="true">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 256 256"
+                      fill="currentColor"
+                      width="64"
+                      height="64"
+                      aria-hidden="true"
+                    >
+                      <path
+                        d="M173.66,98.34a8,8,0,0,1,0,11.32l-56,56a8,8,0,0,1-11.32,0l-24-24a8,8,0,0,1,11.32-11.32L112,148.69l50.34-50.35A8,8,0,0,1,173.66,98.34ZM232,128A104,104,0,1,1,128,24,104.11,104.11,0,0,1,232,128Zm-16,0a88,88,0,1,0-88,88A88.1,88.1,0,0,0,216,128Z"
+                      />
+                    </svg>
+                  </div>
+                  <h3
+                    class="form-confirmation__heading"
+                    id="form-confirmation-heading"
+                    tabindex="-1"
+                  >
+                    Your Enquiry Has Been Received
+                  </h3>
+                  <p class="form-confirmation__body">
+                    Thank you for reaching out. A Meridian travel designer will review your details
+                    and be in touch within 24 hours to begin crafting your journey.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container site-footer__inner">
+        <div class="site-footer__brand">
+          <a class="site-logo" href="/" aria-label="Meridian Travel — Return to homepage"
+            >Meridian</a
+          >
+          <p class="site-footer__tagline">Crafting extraordinary journeys since 2008.</p>
+        </div>
+        <nav class="site-footer__nav" aria-label="Footer navigation">
+          <ul role="list">
+            <li><a href="#destinations">Destinations</a></li>
+            <li><a href="#how-it-works">How It Works</a></li>
+            <li><a href="#featured-journey">Featured Journey</a></li>
+            <li><a href="#inquire">Plan Your Journey</a></li>
+          </ul>
+        </nav>
+        <p class="site-footer__legal">
+          <small>© 2026 Meridian Travel. All rights reserved.</small>
+        </p>
+      </div>
+    </footer>
+
+    <script src="js/main.js" defer></script>
+    <script src="js/form.js" defer></script>
+  </body>
+</html>

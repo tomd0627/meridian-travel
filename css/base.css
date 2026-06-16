@@ -1,0 +1,79 @@
+/* ==========================================================================
+   BASE
+   Body defaults, typography, links, skip link, focus styles.
+   ========================================================================== */
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-sans);
+  font-size: var(--text-base);
+  line-height: var(--leading-normal);
+}
+
+/* Headings use serif. Cormorant 400 is too light at small sizes — use 500+. */
+h1,
+h2,
+h3 {
+  font-family: var(--font-serif);
+  font-weight: 600;
+  letter-spacing: var(--tracking-tight);
+  line-height: var(--leading-tight);
+}
+
+h4,
+h5,
+h6 {
+  font-family: var(--font-serif);
+  font-weight: 500;
+  letter-spacing: var(--tracking-tight);
+  line-height: var(--leading-snug);
+}
+
+a {
+  transition: color var(--transition-fast);
+}
+
+/* ── Skip link ── */
+.skip-link {
+  background-color: var(--color-accent);
+  block-size: auto;
+  border-radius: var(--radius-sm);
+  clip: unset;
+  clip-path: unset;
+  color: #fff;
+  font-family: var(--font-sans);
+  font-size: var(--text-sm);
+  font-weight: 600;
+  inset-block-start: var(--space-4);
+  inset-inline-start: var(--space-4);
+  letter-spacing: var(--tracking-wide);
+  overflow: visible;
+  padding-block: var(--space-2);
+  padding-inline: var(--space-4);
+  position: fixed;
+  text-transform: uppercase;
+  transform: translateY(-200%);
+  transition: transform var(--transition-fast);
+  z-index: var(--z-modal);
+}
+
+.skip-link:focus {
+  transform: translateY(0);
+}
+
+/* ── Focus styles ── */
+:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 3px;
+}
+
+:focus:not(:focus-visible) {
+  outline: none;
+}
+
+/* programmatic focus targets need tabindex="-1" and no visible ring */
+#main-content:focus,
+#form-confirmation-heading:focus {
+  outline: none;
+}
