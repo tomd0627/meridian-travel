@@ -268,7 +268,7 @@
 }
 
 .hero__eyebrow {
-  color: var(--color-accent);
+  color: var(--color-accent-text);
   font-size: var(--text-xs);
   font-weight: 600;
   letter-spacing: var(--tracking-widest);
@@ -428,7 +428,7 @@
 }
 
 .destination-card__region {
-  color: var(--color-accent);
+  color: var(--color-accent-text);
   font-size: var(--text-xs);
   font-weight: 600;
   letter-spacing: var(--tracking-wider);
@@ -469,7 +469,7 @@
 
 .destination-card__link:hover .destination-card__cta,
 .destination-card__link:focus-visible .destination-card__cta {
-  color: var(--color-accent);
+  color: var(--color-accent-text);
   gap: var(--space-3);
 }
 
@@ -612,7 +612,7 @@
 }
 
 .journey__entry-num {
-  color: var(--color-accent);
+  color: var(--color-accent-text);
   font-size: var(--text-xs);
   font-weight: 600;
   letter-spacing: var(--tracking-widest);
@@ -667,7 +667,7 @@
 }
 
 .inquire .section-eyebrow {
-  color: rgb(250 247 242 / 0.6);
+  color: rgb(250 247 242 / 0.75);
 }
 
 .inquire .section-title {
@@ -785,7 +785,7 @@
 }
 
 .form-required {
-  color: var(--color-accent);
+  color: var(--color-accent-text);
   margin-inline-start: var(--space-1);
 }
 

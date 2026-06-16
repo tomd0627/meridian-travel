@@ -95,8 +95,24 @@
       <section class="hero" aria-labelledby="hero-heading">
         <div class="hero__media">
           <picture>
-            <source srcset="images/hero/hero.avif" type="image/avif" />
-            <source srcset="images/hero/hero.webp" type="image/webp" />
+            <source
+              type="image/avif"
+              srcset="
+                /.netlify/images?url=/images/hero/hero.avif&w=480&format=avif  480w,
+                /.netlify/images?url=/images/hero/hero.avif&w=800&format=avif  800w,
+                images/hero/hero.avif                                         1920w
+              "
+              sizes="100vw"
+            />
+            <source
+              type="image/webp"
+              srcset="
+                /.netlify/images?url=/images/hero/hero.webp&w=480&format=webp  480w,
+                /.netlify/images?url=/images/hero/hero.webp&w=800&format=webp  800w,
+                images/hero/hero.webp                                         1920w
+              "
+              sizes="100vw"
+            />
             <img
               class="hero__img"
               src="images/hero/hero.svg"
@@ -153,8 +169,22 @@
               >
                 <div class="destination-card__media">
                   <picture>
-                    <source srcset="images/destinations/amalfi-coast.avif" type="image/avif" />
-                    <source srcset="images/destinations/amalfi-coast.webp" type="image/webp" />
+                    <source
+                      type="image/avif"
+                      srcset="
+                        /.netlify/images?url=/images/destinations/amalfi-coast.avif&w=400&format=avif 400w,
+                        images/destinations/amalfi-coast.avif                                         800w
+                      "
+                      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 67vw"
+                    />
+                    <source
+                      type="image/webp"
+                      srcset="
+                        /.netlify/images?url=/images/destinations/amalfi-coast.webp&w=400&format=webp 400w,
+                        images/destinations/amalfi-coast.webp                                         800w
+                      "
+                      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 67vw"
+                    />
                     <img
                       src="images/destinations/amalfi-coast.svg"
                       alt="Colourful villages cascading down the Amalfi Coast cliffs above a vivid blue sea"
@@ -184,8 +214,22 @@
               >
                 <div class="destination-card__media">
                   <picture>
-                    <source srcset="images/destinations/kyoto.avif" type="image/avif" />
-                    <source srcset="images/destinations/kyoto.webp" type="image/webp" />
+                    <source
+                      type="image/avif"
+                      srcset="
+                        /.netlify/images?url=/images/destinations/kyoto.avif&w=400&format=avif 400w,
+                        images/destinations/kyoto.avif                                         600w
+                      "
+                      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                    />
+                    <source
+                      type="image/webp"
+                      srcset="
+                        /.netlify/images?url=/images/destinations/kyoto.webp&w=400&format=webp 400w,
+                        images/destinations/kyoto.webp                                         600w
+                      "
+                      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                    />
                     <img
                       src="images/destinations/kyoto.svg"
                       alt="Ancient Fushimi Inari torii gates winding through cedar forest at dawn"
@@ -215,8 +259,22 @@
               >
                 <div class="destination-card__media">
                   <picture>
-                    <source srcset="images/destinations/patagonia.avif" type="image/avif" />
-                    <source srcset="images/destinations/patagonia.webp" type="image/webp" />
+                    <source
+                      type="image/avif"
+                      srcset="
+                        /.netlify/images?url=/images/destinations/patagonia.avif&w=400&format=avif 400w,
+                        images/destinations/patagonia.avif                                         600w
+                      "
+                      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                    />
+                    <source
+                      type="image/webp"
+                      srcset="
+                        /.netlify/images?url=/images/destinations/patagonia.webp&w=400&format=webp 400w,
+                        images/destinations/patagonia.webp                                         600w
+                      "
+                      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                    />
                     <img
                       src="images/destinations/patagonia.svg"
                       alt="Torres del Paine granite spires reflected in a glacial lake at sunrise"
@@ -246,8 +304,22 @@
               >
                 <div class="destination-card__media">
                   <picture>
-                    <source srcset="images/destinations/marrakech.avif" type="image/avif" />
-                    <source srcset="images/destinations/marrakech.webp" type="image/webp" />
+                    <source
+                      type="image/avif"
+                      srcset="
+                        /.netlify/images?url=/images/destinations/marrakech.avif&w=400&format=avif 400w,
+                        images/destinations/marrakech.avif                                         600w
+                      "
+                      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                    />
+                    <source
+                      type="image/webp"
+                      srcset="
+                        /.netlify/images?url=/images/destinations/marrakech.webp&w=400&format=webp 400w,
+                        images/destinations/marrakech.webp                                         600w
+                      "
+                      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                    />
                     <img
                       src="images/destinations/marrakech.svg"
                       alt="Intricate mosaic tilework in a Marrakech riad courtyard with a central fountain"
@@ -277,8 +349,22 @@
               >
                 <div class="destination-card__media">
                   <picture>
-                    <source srcset="images/destinations/santorini.avif" type="image/avif" />
-                    <source srcset="images/destinations/santorini.webp" type="image/webp" />
+                    <source
+                      type="image/avif"
+                      srcset="
+                        /.netlify/images?url=/images/destinations/santorini.avif&w=400&format=avif 400w,
+                        images/destinations/santorini.avif                                         600w
+                      "
+                      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                    />
+                    <source
+                      type="image/webp"
+                      srcset="
+                        /.netlify/images?url=/images/destinations/santorini.webp&w=400&format=webp 400w,
+                        images/destinations/santorini.webp                                         600w
+                      "
+                      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                    />
                     <img
                       src="images/destinations/santorini.svg"
                       alt="Whitewashed Santorini buildings with blue domes overlooking the Aegean caldera at sunset"
@@ -308,8 +394,24 @@
               >
                 <div class="destination-card__media">
                   <picture>
-                    <source srcset="images/destinations/maldives.avif" type="image/avif" />
-                    <source srcset="images/destinations/maldives.webp" type="image/webp" />
+                    <source
+                      type="image/avif"
+                      srcset="
+                        /.netlify/images?url=/images/destinations/maldives.avif&w=400&format=avif  400w,
+                        /.netlify/images?url=/images/destinations/maldives.avif&w=800&format=avif  800w,
+                        images/destinations/maldives.avif                                         1200w
+                      "
+                      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 100vw"
+                    />
+                    <source
+                      type="image/webp"
+                      srcset="
+                        /.netlify/images?url=/images/destinations/maldives.webp&w=400&format=webp  400w,
+                        /.netlify/images?url=/images/destinations/maldives.webp&w=800&format=webp  800w,
+                        images/destinations/maldives.webp                                         1200w
+                      "
+                      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 100vw"
+                    />
                     <img
                       src="images/destinations/maldives.svg"
                       alt="Overwater bungalows extending over crystal-clear turquoise lagoon in the Maldives"
@@ -503,8 +605,22 @@
                 </header>
                 <div class="journey__entry-body">
                   <picture>
-                    <source srcset="images/journey/day-01.avif" type="image/avif" />
-                    <source srcset="images/journey/day-01.webp" type="image/webp" />
+                    <source
+                      type="image/avif"
+                      srcset="
+                        /.netlify/images?url=/images/journey/day-01.avif&w=400&format=avif 400w,
+                        images/journey/day-01.avif                                         800w
+                      "
+                      sizes="(max-width: 900px) 100vw, 800px"
+                    />
+                    <source
+                      type="image/webp"
+                      srcset="
+                        /.netlify/images?url=/images/journey/day-01.webp&w=400&format=webp 400w,
+                        images/journey/day-01.webp                                         800w
+                      "
+                      sizes="(max-width: 900px) 100vw, 800px"
+                    />
                     <img
                       src="images/journey/day-01.svg"
                       alt="Tokyo skyline at dusk — neon lights reflected in rain-slicked streets below a dramatic sky"
@@ -530,8 +646,22 @@
                 </header>
                 <div class="journey__entry-body">
                   <picture>
-                    <source srcset="images/journey/day-02.avif" type="image/avif" />
-                    <source srcset="images/journey/day-02.webp" type="image/webp" />
+                    <source
+                      type="image/avif"
+                      srcset="
+                        /.netlify/images?url=/images/journey/day-02.avif&w=400&format=avif 400w,
+                        images/journey/day-02.avif                                         800w
+                      "
+                      sizes="(max-width: 900px) 100vw, 800px"
+                    />
+                    <source
+                      type="image/webp"
+                      srcset="
+                        /.netlify/images?url=/images/journey/day-02.webp&w=400&format=webp 400w,
+                        images/journey/day-02.webp                                         800w
+                      "
+                      sizes="(max-width: 900px) 100vw, 800px"
+                    />
                     <img
                       src="images/journey/day-02.svg"
                       alt="Shibuya Crossing from above — a sea of umbrellas converging from every direction at rush hour"
@@ -557,8 +687,22 @@
                 </header>
                 <div class="journey__entry-body">
                   <picture>
-                    <source srcset="images/journey/day-03.avif" type="image/avif" />
-                    <source srcset="images/journey/day-03.webp" type="image/webp" />
+                    <source
+                      type="image/avif"
+                      srcset="
+                        /.netlify/images?url=/images/journey/day-03.avif&w=400&format=avif 400w,
+                        images/journey/day-03.avif                                         800w
+                      "
+                      sizes="(max-width: 900px) 100vw, 800px"
+                    />
+                    <source
+                      type="image/webp"
+                      srcset="
+                        /.netlify/images?url=/images/journey/day-03.webp&w=400&format=webp 400w,
+                        images/journey/day-03.webp                                         800w
+                      "
+                      sizes="(max-width: 900px) 100vw, 800px"
+                    />
                     <img
                       src="images/journey/day-03.svg"
                       alt="Tsukiji outer market stalls brimming with fresh seafood and street food at dawn"
@@ -586,8 +730,22 @@
                 </header>
                 <div class="journey__entry-body">
                   <picture>
-                    <source srcset="images/journey/day-04.avif" type="image/avif" />
-                    <source srcset="images/journey/day-04.webp" type="image/webp" />
+                    <source
+                      type="image/avif"
+                      srcset="
+                        /.netlify/images?url=/images/journey/day-04.avif&w=400&format=avif 400w,
+                        images/journey/day-04.avif                                         800w
+                      "
+                      sizes="(max-width: 900px) 100vw, 800px"
+                    />
+                    <source
+                      type="image/webp"
+                      srcset="
+                        /.netlify/images?url=/images/journey/day-04.webp&w=400&format=webp 400w,
+                        images/journey/day-04.webp                                         800w
+                      "
+                      sizes="(max-width: 900px) 100vw, 800px"
+                    />
                     <img
                       src="images/journey/day-04.svg"
                       alt="Tōshō-gū shrine gate adorned with intricate gold and lacquer carvings among cedar trees"
@@ -613,8 +771,22 @@
                 </header>
                 <div class="journey__entry-body">
                   <picture>
-                    <source srcset="images/journey/day-05.avif" type="image/avif" />
-                    <source srcset="images/journey/day-05.webp" type="image/webp" />
+                    <source
+                      type="image/avif"
+                      srcset="
+                        /.netlify/images?url=/images/journey/day-05.avif&w=400&format=avif 400w,
+                        images/journey/day-05.avif                                         800w
+                      "
+                      sizes="(max-width: 900px) 100vw, 800px"
+                    />
+                    <source
+                      type="image/webp"
+                      srcset="
+                        /.netlify/images?url=/images/journey/day-05.webp&w=400&format=webp 400w,
+                        images/journey/day-05.webp                                         800w
+                      "
+                      sizes="(max-width: 900px) 100vw, 800px"
+                    />
                     <img
                       src="images/journey/day-05.svg"
                       alt="Mount Fuji reflected in Lake Ashi on a perfectly still morning, framed by pine trees"
@@ -642,8 +814,22 @@
                 </header>
                 <div class="journey__entry-body">
                   <picture>
-                    <source srcset="images/journey/day-06.avif" type="image/avif" />
-                    <source srcset="images/journey/day-06.webp" type="image/webp" />
+                    <source
+                      type="image/avif"
+                      srcset="
+                        /.netlify/images?url=/images/journey/day-06.avif&w=400&format=avif 400w,
+                        images/journey/day-06.avif                                         800w
+                      "
+                      sizes="(max-width: 900px) 100vw, 800px"
+                    />
+                    <source
+                      type="image/webp"
+                      srcset="
+                        /.netlify/images?url=/images/journey/day-06.webp&w=400&format=webp 400w,
+                        images/journey/day-06.webp                                         800w
+                      "
+                      sizes="(max-width: 900px) 100vw, 800px"
+                    />
                     <img
                       src="images/journey/day-06.svg"
                       alt="Bamboo grove in Arashiyama — towering green canes filtering soft morning light into cathedral silence"
@@ -670,8 +856,22 @@
                 </header>
                 <div class="journey__entry-body">
                   <picture>
-                    <source srcset="images/journey/day-07.avif" type="image/avif" />
-                    <source srcset="images/journey/day-07.webp" type="image/webp" />
+                    <source
+                      type="image/avif"
+                      srcset="
+                        /.netlify/images?url=/images/journey/day-07.avif&w=400&format=avif 400w,
+                        images/journey/day-07.avif                                         800w
+                      "
+                      sizes="(max-width: 900px) 100vw, 800px"
+                    />
+                    <source
+                      type="image/webp"
+                      srcset="
+                        /.netlify/images?url=/images/journey/day-07.webp&w=400&format=webp 400w,
+                        images/journey/day-07.webp                                         800w
+                      "
+                      sizes="(max-width: 900px) 100vw, 800px"
+                    />
                     <img
                       src="images/journey/day-07.svg"
                       alt="A tunnel of vermilion torii gates climbing the forested slopes of Fushimi Inari at sunrise"
@@ -700,8 +900,22 @@
                 </header>
                 <div class="journey__entry-body">
                   <picture>
-                    <source srcset="images/journey/day-08.avif" type="image/avif" />
-                    <source srcset="images/journey/day-08.webp" type="image/webp" />
+                    <source
+                      type="image/avif"
+                      srcset="
+                        /.netlify/images?url=/images/journey/day-08.avif&w=400&format=avif 400w,
+                        images/journey/day-08.avif                                         800w
+                      "
+                      sizes="(max-width: 900px) 100vw, 800px"
+                    />
+                    <source
+                      type="image/webp"
+                      srcset="
+                        /.netlify/images?url=/images/journey/day-08.webp&w=400&format=webp 400w,
+                        images/journey/day-08.webp                                         800w
+                      "
+                      sizes="(max-width: 900px) 100vw, 800px"
+                    />
                     <img
                       src="images/journey/day-08.svg"
                       alt="The Philosopher's Path in Kyoto — a canal walkway lined with cherry blossom trees in full bloom"
@@ -728,8 +942,22 @@
                 </header>
                 <div class="journey__entry-body">
                   <picture>
-                    <source srcset="images/journey/day-09.avif" type="image/avif" />
-                    <source srcset="images/journey/day-09.webp" type="image/webp" />
+                    <source
+                      type="image/avif"
+                      srcset="
+                        /.netlify/images?url=/images/journey/day-09.avif&w=400&format=avif 400w,
+                        images/journey/day-09.avif                                         800w
+                      "
+                      sizes="(max-width: 900px) 100vw, 800px"
+                    />
+                    <source
+                      type="image/webp"
+                      srcset="
+                        /.netlify/images?url=/images/journey/day-09.webp&w=400&format=webp 400w,
+                        images/journey/day-09.webp                                         800w
+                      "
+                      sizes="(max-width: 900px) 100vw, 800px"
+                    />
                     <img
                       src="images/journey/day-09.svg"
                       alt="Sacred deer grazing freely among lantern-lined paths in Nara Park at golden hour"
@@ -756,8 +984,22 @@
                 </header>
                 <div class="journey__entry-body">
                   <picture>
-                    <source srcset="images/journey/day-10.avif" type="image/avif" />
-                    <source srcset="images/journey/day-10.webp" type="image/webp" />
+                    <source
+                      type="image/avif"
+                      srcset="
+                        /.netlify/images?url=/images/journey/day-10.avif&w=400&format=avif 400w,
+                        images/journey/day-10.avif                                         800w
+                      "
+                      sizes="(max-width: 900px) 100vw, 800px"
+                    />
+                    <source
+                      type="image/webp"
+                      srcset="
+                        /.netlify/images?url=/images/journey/day-10.webp&w=400&format=webp 400w,
+                        images/journey/day-10.webp                                         800w
+                      "
+                      sizes="(max-width: 900px) 100vw, 800px"
+                    />
                     <img
                       src="images/journey/day-10.svg"
                       alt="The grand atrium of Kyoto Station at dawn — soaring steel and glass architecture in quiet morning light"

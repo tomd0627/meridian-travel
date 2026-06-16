@@ -9,6 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
   var header = document.querySelector('.site-header');
   var navToggle = document.querySelector('.nav-toggle');
   var siteNav = document.getElementById('site-nav');
+  var firstNavLink;
 
   // ── Reveal observer ──────────────────────────────────────────────────────────
   if (revealEls.length) {
@@ -102,14 +103,34 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // ── Mobile nav toggle ────────────────────────────────────────────────────────
   if (navToggle && siteNav) {
+    firstNavLink = siteNav.querySelector('a');
+
+    function openNav() {
+      navToggle.setAttribute('aria-expanded', 'true');
+      navToggle.setAttribute('aria-label', 'Close navigation menu');
+      siteNav.classList.add('is-open');
+      if (firstNavLink) firstNavLink.focus();
+    }
+
+    function closeNav() {
+      navToggle.setAttribute('aria-expanded', 'false');
+      navToggle.setAttribute('aria-label', 'Open navigation menu');
+      siteNav.classList.remove('is-open');
+      navToggle.focus();
+    }
+
     navToggle.addEventListener('click', () => {
-      var expanded = navToggle.getAttribute('aria-expanded') === 'true';
-      navToggle.setAttribute('aria-expanded', String(!expanded));
-      siteNav.classList.toggle('is-open', !expanded);
-      navToggle.setAttribute(
-        'aria-label',
-        expanded ? 'Open navigation menu' : 'Close navigation menu',
-      );
+      if (navToggle.getAttribute('aria-expanded') === 'true') {
+        closeNav();
+      } else {
+        openNav();
+      }
+    });
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && siteNav.classList.contains('is-open')) {
+        closeNav();
+      }
     });
   }
 });

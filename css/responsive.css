@@ -207,7 +207,7 @@ section {
   .site-nav__link {
     align-items: center;
     display: inline-flex;
-    padding-block: 0;
+    padding-block: var(--space-1);
   }
 
   .site-nav__link.btn--outline {
