@@ -30,6 +30,7 @@ Everything is plain HTML, CSS, and ES6+ JavaScript. No React, no Vite, no PostCS
 | ---------------------------------------------------------- | ----------------------------- |
 | Scroll-reveal for any `[data-reveal]` element              | `IntersectionObserver`        |
 | Sticky journey sidebar — highlights the lowest visible day | `IntersectionObserver`        |
+| Mobile itinerary select — syncs with scroll, jumps to day  | `IntersectionObserver` + `change` listener |
 | Header scroll state                                        | passive `scroll` listener     |
 | Mobile nav toggle with `aria-expanded` state               | click handler                 |
 | 2-step enquiry form with per-field validation              | custom validation, no library |
@@ -124,7 +125,7 @@ css/
   responsive.css        Breakpoint overrides (sm/md/lg/xl)
 
 js/
-  main.js               IntersectionObserver behaviours, header, nav toggle
+  main.js               IntersectionObserver behaviours, header, nav toggle, mobile itinerary select
   form.js               2-step enquiry form with validation
 
 tests/
