@@ -112,11 +112,11 @@ document.addEventListener('DOMContentLoaded', () => {
       if (firstNavLink) firstNavLink.focus();
     }
 
-    function closeNav() {
+    function closeNav(restoreFocus) {
       navToggle.setAttribute('aria-expanded', 'false');
       navToggle.setAttribute('aria-label', 'Open navigation menu');
       siteNav.classList.remove('is-open');
-      navToggle.focus();
+      if (restoreFocus !== false) navToggle.focus();
     }
 
     navToggle.addEventListener('click', () => {
@@ -131,6 +131,14 @@ document.addEventListener('DOMContentLoaded', () => {
       if (e.key === 'Escape' && siteNav.classList.contains('is-open')) {
         closeNav();
       }
+    });
+
+    siteNav.querySelectorAll('a[href^="#"]').forEach((link) => {
+      link.addEventListener('click', () => {
+        if (siteNav.classList.contains('is-open')) {
+          closeNav(false);
+        }
+      });
     });
   }
 });
