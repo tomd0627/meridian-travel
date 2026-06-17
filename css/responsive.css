@@ -159,6 +159,17 @@ section {
   font-size: clamp(var(--text-4xl), 10vw, var(--text-5xl));
 }
 
+.hero__overlay {
+  background: linear-gradient(
+    to bottom,
+    rgb(0 0 0 / 0.45) 0%,
+    rgb(0 0 0 / 0) 22%,
+    rgb(250 247 242 / 0) 38%,
+    rgb(250 247 242 / 0.95) 68%,
+    var(--color-bg) 88%
+  );
+}
+
 .hero__scroll-indicator {
   display: none;
 }
@@ -173,6 +184,7 @@ section {
   }
 
   .form-field-row {
+    gap: var(--space-4);
     grid-template-columns: 1fr 1fr;
   }
 }
@@ -182,42 +194,21 @@ section {
    ══════════════════════════════════════════════ */
 
 @media (width >= 768px) {
-  .nav-toggle {
-    display: none;
-  }
-
-  .site-nav {
-    background-color: transparent;
-    block-size: auto;
-    border-block-start: none;
-    box-shadow: none;
-    display: flex;
-    padding-block: 0;
-    position: static;
-    z-index: auto;
-  }
-
-  .site-nav__list {
-    align-items: center;
-    flex-direction: row;
-    gap: var(--space-8);
-    padding-inline: 0;
-  }
-
-  .site-nav__link {
-    align-items: center;
-    display: inline-flex;
-    padding-block: var(--space-1);
-  }
-
-  .site-nav__link.btn--outline {
-    margin-block-start: 0;
-  }
-
   /* Hero: restore full-viewport height and scroll indicator at tablet and above */
   .hero {
     block-size: 100svh;
     min-block-size: 640px;
+  }
+
+  .hero__overlay {
+    background: linear-gradient(
+      to bottom,
+      rgb(0 0 0 / 0.35) 0%,
+      rgb(0 0 0 / 0) 18%,
+      rgb(250 247 242 / 0) 50%,
+      rgb(250 247 242 / 0.88) 78%,
+      var(--color-bg) 100%
+    );
   }
 
   .hero__scroll-indicator {
@@ -231,17 +222,17 @@ section {
       'patagonia marrakech'
       'santorini maldives';
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: 22rem 18rem 18rem;
+    grid-template-rows: auto;
   }
 
   .destination-card {
-    block-size: 100%;
+    block-size: auto;
   }
 
   .destination-card__media {
-    aspect-ratio: unset;
-    flex: 1;
-    min-block-size: 0;
+    aspect-ratio: 3 / 2;
+    flex: unset;
+    min-block-size: unset;
   }
 
   /* Steps: 3 columns restored at tablet */
@@ -318,6 +309,16 @@ section {
     grid-template-rows: 28rem 20rem 20rem;
   }
 
+  .destination-card {
+    block-size: 100%;
+  }
+
+  .destination-card__media {
+    aspect-ratio: unset;
+    flex: 1;
+    min-block-size: 0;
+  }
+
   .hero__heading {
     font-size: clamp(var(--text-5xl), 7vw, var(--text-7xl));
   }
@@ -326,6 +327,38 @@ section {
   .journey__entry-body img {
     block-size: auto;
     max-block-size: 28rem;
+  }
+
+  .nav-toggle {
+    display: none;
+  }
+
+  .site-nav {
+    background-color: transparent;
+    block-size: auto;
+    border-block-start: none;
+    box-shadow: none;
+    display: flex;
+    padding-block: 0;
+    position: static;
+    z-index: auto;
+  }
+
+  .site-nav__link {
+    align-items: center;
+    display: inline-flex;
+    padding-block: var(--space-1);
+  }
+
+  .site-nav__link.btn--outline {
+    margin-block-start: 0;
+  }
+
+  .site-nav__list {
+    align-items: center;
+    flex-direction: row;
+    gap: var(--space-8);
+    padding-inline: 0;
   }
 
   .site-footer__inner {

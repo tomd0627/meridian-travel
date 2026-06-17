@@ -239,7 +239,6 @@
 }
 
 .hero__img {
-  block-size: 100%;
   inline-size: 100%;
   object-fit: cover;
   object-position: center;
@@ -774,7 +773,6 @@
 
 .form-field-row {
   display: grid;
-  gap: var(--space-4);
   grid-template-columns: 1fr 1fr;
 }
 
