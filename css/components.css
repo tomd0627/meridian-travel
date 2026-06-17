@@ -688,6 +688,7 @@
 .form-wrapper {
   background-color: var(--color-bg);
   border-radius: var(--radius-lg);
+  min-inline-size: 0;
   padding: var(--space-8);
 }
 
@@ -799,6 +800,7 @@
   background-color: #fff;
   border: 1.5px solid var(--color-border);
   border-radius: var(--radius-sm);
+  box-sizing: border-box;
   color: var(--color-text);
   font-size: var(--text-base);
   inline-size: 100%;

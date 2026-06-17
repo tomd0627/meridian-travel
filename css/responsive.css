@@ -127,6 +127,11 @@
   grid-template-columns: 1fr;
 }
 
+.form-actions .btn {
+  inline-size: 100%;
+  justify-content: center;
+}
+
 .inquire__inner {
   grid-template-columns: 1fr;
 }
@@ -172,6 +177,32 @@ section {
 
 .hero__scroll-indicator {
   display: none;
+}
+
+/* iOS Safari: date inputs have a UA-enforced minimum width that only
+   appearance: none can remove. Scoped to mobile to avoid overriding
+   the native calendar chrome on desktop (Chrome ignores appearance: none
+   on date inputs and would double-render the icon). */
+@media (width < 640px) {
+  input[type='date'].form-input {
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 256 256' fill='%235a5047'%3E%3Cpath d='M208,32H184V24a8,8,0,0,0-16,0v8H88V24a8,8,0,0,0-16,0v8H48A16,16,0,0,0,32,48V208a16,16,0,0,0,16,16H208a16,16,0,0,0,16-16V48A16,16,0,0,0,208,32Zm0,176H48V96H208Zm0-128H48V48H72v8a8,8,0,0,0,16,0V48h80v8a8,8,0,0,0,16,0V48h24Z'/%3E%3C/svg%3E");
+    background-position: right var(--space-4) center;
+    background-repeat: no-repeat;
+    background-size: 1rem 1rem;
+    display: block;
+    padding-inline-end: var(--space-10);
+  }
+
+  input[type='date'].form-input::-webkit-date-and-time-value {
+    min-block-size: 1em;
+    text-align: start;
+  }
+
+  input[type='date'].form-input::-webkit-datetime-edit {
+    line-height: 1.2;
+    padding: 0;
+  }
 }
 
 /* ══════════════════════════════════════════════
